@@ -44,7 +44,7 @@ birthdayImg.addEventListener('click', function () {
 
 // btn 
 const ronBtn = document.querySelector('.form__btn--ron')
-const completeRandom = document.querySelector('.form__btn--insp')
+const completeRandom = document.querySelector('.form__btn--random')
 
 // top div space
 const ronText = document.querySelector('.quote__one--text')
@@ -100,4 +100,14 @@ completeRandom.addEventListener('click', () => {
             random.innerText = quoteArray
         })
         .catch(err => console.log(err))
+})
+
+
+// click event for restart 
+
+const restartBtn = document.querySelector('.restart')
+
+restartBtn.addEventListener('click', () => {
+    // console.log('clicked')
+    window.location.href = window.location.href
 })

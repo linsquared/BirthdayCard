@@ -1,5 +1,5 @@
 // @use './typography' as *;
-// @use './variables' as *;
+@use './variables' as *;
 
 * {
     box-sizing: border-box;
@@ -21,7 +21,7 @@ html {
 body {
     overflow-x: hidden;
     max-width: 800px;
-    font-family: 'Acme', sans-serif;
+    font-family: 'Acme', Arial, Helvetica, sans-serif;
 }
 
 .wrapper {

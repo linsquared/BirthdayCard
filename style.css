@@ -17,7 +17,7 @@ html {
 body {
   overflow-x: hidden;
   max-width: 800px;
-  font-family: "Acme", sans-serif;
+  font-family: "Acme", Arial, Helvetica, sans-serif;
 }
 
 .wrapper {
@@ -37,268 +37,106 @@ button {
   text-transform: uppercase;
 }
 
-.header__logo--image {
-  position: absolute;
-  width: 15%;
-  height: 10%;
-  left: 0%;
-  box-shadow: 2px 2px 4px black;
-}
-@media screen and (min-width: 768px) {
-  .header__logo--image {
-    width: 15%;
-    height: 15%;
-    left: 8%;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .header__logo--image {
-    left: 4.8%;
-  }
-}
-
-.hero__image {
+.hero {
   width: 100vw;
   height: 100vh;
+  background-image: url("./assets/card-3.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  overflow-x: hidden;
 }
-@media screen and (min-width: 768px) {
-  .hero {
-    width: 100vw;
-    height: 100vh;
-  }
-  .hero__image {
-    height: 100vh;
-    width: 95vw;
-    padding-left: 60px;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .hero {
-    height: 80vh;
-  }
-}
-
-.form {
-  position: absolute;
-  top: 60%;
-  left: 35%;
-}
-.form__date {
-  font-size: 2rem;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  color: grey;
-  margin-right: 7rem;
-}
-@media screen and (min-width: 600px) {
-  .form__date {
-    width: 24rem;
-    height: 5rem;
-    text-align: center;
-    border: 2.2px solid #a58966;
-    margin-top: 1.5rem;
-    margin-left: -1rem;
-  }
-}
-.form__btn {
-  background-color: #deb887;
-  position: absolute;
-  top: 150%;
-  right: 50%;
-  transform: translateX(50%);
-  display: inline-block;
-  padding: 0.5em 3em;
-  border: 0.16em solid #FFFFFF;
-  margin: 0 0.3em 0.3em 0;
-  box-sizing: border-box;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  color: #FFFFFF;
-  text-align: center;
-  transition: all 0.15s;
-}
-
-.date__btn {
-  margin-right: 4rem;
-}
-@media screen and (min-width: 600px) {
-  .date__btn {
-    height: 5rem;
-    font-size: 2.2rem;
-    letter-spacing: 0.2rem;
-    text-align: center;
-    top: 130%;
-  }
-}
-
-.hero__image {
-  width: 100vw;
-  height: 100vh;
-}
-
 .hero__second--page {
   height: 100vh;
   width: 100vw;
   position: relative;
 }
 
-.quote__form {
-  position: relative;
+.form {
+  position: absolute;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 52vh;
 }
-@media screen and (min-width: 600px) {
-  .quote__form {
-    display: flex;
-    justify-content: center;
-  }
+.form__date {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 2rem;
+  color: rgb(24, 23, 23);
+  border: 1px solid rgb(255, 86, 38);
+  padding: 0.8rem;
+  margin-bottom: 1.2rem;
 }
-@media screen and (min-width: 768px) {
-  .quote__form {
-    left: 45%;
-  }
+.form__btn {
+  background-color: rgb(255, 86, 38);
+  color: white;
+  padding: 0.8em 3.2em;
+  border: 1px solid white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-align: center;
 }
-@media screen and (min-width: 1280px) {
-  .quote__form {
-    top: 78%;
-    left: 42%;
-  }
-  .quote__form__date {
-    font-size: 3rem;
-  }
-  .quote__form__btn {
-    padding: 1em 5em;
-  }
-}
-
-.quote__one,
-.quote__two,
-.quote__three {
-  height: 30%;
-  width: 90vw;
-  margin: 0 auto;
-  position: relative;
+.form__btn--ron, .form__btn--random {
+  align-self: center;
 }
 
 .quote__one {
-  height: 27%;
-  margin-top: 2rem;
+  margin-top: 2%;
+  display: flex;
+  flex-direction: column-reverse;
 }
-
-button.form__btn--ron {
-  position: absolute;
-  top: -1rem;
-  padding: 0.4em 3.4em;
-  z-index: 2;
+.quote__one--text {
+  align-self: center;
 }
-@media screen and (min-width: 600px) {
-  button.form__btn--ron {
-    font-size: 1.8rem;
+.quote__two--text {
+  margin-left: 5vw;
+}
+.quote__form {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+.quote__btn {
+  width: 35vw;
+  padding: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .quote__btn {
+    width: 25rem;
   }
+}
+.quote__three {
+  display: flex;
+  flex-direction: column-reverse;
+}
+.quote__three--text {
+  align-self: center;
 }
 
 .quote__one--text,
 .quote__two--text,
 .quote__three--text {
-  margin-top: 7%;
-  width: 85vw;
-  height: 75%;
-  position: absolute;
-  top: 12%;
+  margin-bottom: 1rem;
+  height: 25vh;
   font-size: 1.8rem;
-  margin-left: 0.8rem;
+  width: 90vw;
   text-align: center;
-  color: #241e14;
-}
-@media screen and (min-width: 451px) {
-  .quote__one--text,
-  .quote__two--text,
-  .quote__three--text {
-    height: 68%;
-    margin-top: 3%;
-    left: 50%;
-    transform: translateX(-51.5%);
-  }
-}
-@media screen and (min-width: 600px) {
-  .quote__one--text,
-  .quote__two--text,
-  .quote__three--text {
-    font-size: 2.5rem;
-  }
-}
-
-.quote__two {
-  margin-top: 3rem;
-  height: 33%;
-}
-.quote__two--text {
-  margin-top: 10%;
-  height: 70%;
-}
-@media screen and (min-width: 451px) {
-  .quote__two--text {
-    height: 65%;
-  }
+  padding-top: 1rem;
 }
 
 .input__quote {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  padding: 1rem;
-  border-radius: 1px;
-  border: 2px solid #a58966;
-  margin-top: -2rem;
-  text-transform: uppercase;
-  text-align: center;
-}
-@media screen and (min-width: 600px) {
-  .input__quote {
-    position: static;
-    width: 20rem;
-    transform: translateX(5%);
-    padding: 0;
-    margin-top: 0;
-  }
+  width: 45vw;
+  padding: 1rem 2rem;
+  border: 1px solid rgb(255, 86, 38);
 }
 
-button.quote__btn {
-  top: 80%;
-  margin-top: 2.5rem;
-}
-@media screen and (min-width: 600px) {
-  button.quote__btn {
-    font-size: 1.8rem;
-    position: static;
-    margin-left: -5rem;
-  }
-}
-
-button.form__btn--insp {
-  padding: 0.9em 2em;
-  position: absolute;
-  top: -7%;
-}
-@media screen and (min-width: 600px) {
-  button.form__btn--insp {
-    font-size: 1.6rem;
-  }
-}
-
-.quote__three {
-  margin-top: 2rem;
-  position: relative;
-}
-.quote__three--text {
-  height: 78%;
-  margin-top: 4%;
-}
-
-iframe {
-  position: absolute;
-  width: 7rem;
-  height: 7rem;
-  opacity: 0.05;
+.hero__image--birthday {
+  height: 100vh;
+  width: 100vw;
 }
 
 .display {
@@ -308,4 +146,11 @@ iframe {
 .visible {
   z-index: -2;
   opacity: 0.6;
+}
+
+.restart {
+  position: absolute;
+  bottom: 2%;
+  padding: 1rem 2rem;
+  border-radius: 4px;
 }/*# sourceMappingURL=style.css.map */
