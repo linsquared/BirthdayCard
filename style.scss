@@ -1,0 +1,289 @@
+@use './style/global' as *;
+@use './style/mixins' as *;
+
+// header
+
+.header {
+    &__logo--image {
+        position: absolute;
+        width: 15%;
+        height: 10%;
+        left: 0%;
+        box-shadow: 2px 2px 4px black;
+
+        @include tablet {
+            width: 15%;
+            height: 15%;
+            left: 8%;
+        }
+    }
+
+    @include desktop {
+        &__logo--image {
+            left: 4.8%;
+        }
+    }
+}
+
+// Hero Section
+.hero {
+    &__image {
+        width: 100vw;
+        height: 100vh;
+    }
+
+    @include tablet {
+        width: 100vw;
+        height: 100vh;
+        // background-color: #fff0f5;
+
+        &__image {
+            height: 100vh;
+            width: 95vw;
+            padding-left: 60px;
+        }
+    }
+
+    @include desktop {
+        height: 80vh
+    }
+}
+
+
+// Form Section
+
+.form {
+    position: absolute;
+    top: 60%;
+    left: 35%;
+
+    &__date {
+        font-size: 2rem;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        color: grey;
+        margin-right: 7rem;
+
+        @include breaking2 {
+            width: 24rem;
+            height: 5rem;
+            text-align: center;
+            border: 2.2px solid #a58966;
+            margin-top: 1.5rem;
+            margin-left: -1rem;
+        }
+    }
+
+    &__btn {
+        background-color: #deb887;
+        position: absolute;
+        top: 150%;
+        right: 50%;
+        transform: translateX(50%);
+        display: inline-block;
+        padding: 0.5em 3em;
+        border: 0.16em solid #FFFFFF;
+        margin: 0 0.3em 0.3em 0;
+        box-sizing: border-box;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 400;
+        color: #FFFFFF;
+        text-align: center;
+        transition: all 0.15s;
+    }
+}
+
+.date__btn {
+    margin-right: 4rem;
+
+    @include breaking2 {
+        height: 5rem;
+        font-size: 2.2rem;
+        letter-spacing: .2rem;
+        text-align: center;
+        top: 130%;
+
+    }
+}
+
+// hero section
+.hero {
+    &__image {
+        width: 100vw;
+        height: 100vh;
+    }
+
+    // &__copyright {}
+}
+
+// SUBPAGE STYLING
+.hero__second--page {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+}
+
+
+
+.quote__form {
+    position: relative;
+
+    @include breaking2 {
+        display: flex;
+        justify-content: center;
+    }
+
+    @include tablet {
+        left: 45%;
+    }
+
+    @include desktop {
+        top: 78%;
+        left: 42%;
+
+        &__date {
+            font-size: 3rem;
+        }
+
+        &__btn {
+            padding: 1em 5em;
+        }
+    }
+}
+
+
+.quote__one,
+.quote__two,
+.quote__three {
+    height: 30%;
+    width: 90vw;
+    // background-color: #deb88747;
+    margin: 0 auto;
+    position: relative;
+}
+
+.quote__one {
+    height: 27%;
+    margin-top: 2rem;
+}
+
+button.form__btn--ron {
+    position: absolute;
+    top: -1rem;
+    padding: 0.4em 3.4em;
+    z-index: 2;
+
+    @include breaking2 {
+        font-size: 1.8rem;
+    }
+}
+
+.quote__one--text,
+.quote__two--text,
+.quote__three--text {
+    margin-top: 7%;
+    width: 85vw;
+    // background-color: lightblue;
+    height: 75%;
+    position: absolute;
+    top: 12%;
+    font-size: 1.8rem;
+    margin-left: .8rem;
+    text-align: center;
+    color: #241e14;
+
+    @include breaking1 {
+        height: 68%;
+        margin-top: 3%;
+        left: 50%;
+        transform: translateX(-51.5%);
+    }
+
+    @include breaking2 {
+        font-size: 2.5rem;
+    }
+}
+
+.quote__two {
+    margin-top: 3rem;
+    height: 33%;
+
+    &--text {
+        margin-top: 10%;
+        height: 70%;
+
+        @include breaking1 {
+            height: 65%;
+        }
+    }
+}
+
+.input__quote {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 1rem;
+    border-radius: 1px;
+    border: 2px solid #a58966;
+    margin-top: -2rem;
+    text-transform: uppercase;
+    text-align: center;
+
+    @include breaking2 {
+        position: static;
+        width: 20rem;
+        transform: translateX(5%);
+        padding: 0;
+        margin-top: 0;
+    }
+}
+
+
+button.quote__btn {
+    top: 80%;
+    margin-top: 2.5rem;
+
+    @include breaking2 {
+        font-size: 1.8rem;
+        position: static;
+        margin-left: -5rem;
+    }
+}
+
+button.form__btn--insp {
+    padding: 0.9em 2em;
+    position: absolute;
+    top: -7%;
+
+    @include breaking2 {
+        font-size: 1.6rem;
+    }
+}
+
+.quote__three {
+    margin-top: 2rem;
+    position: relative;
+
+    &--text {
+        height: 78%;
+        margin-top: 4%
+    }
+}
+
+iframe {
+    position: absolute;
+    width: 7rem;
+    height: 7rem;
+    // z-index: -2;
+    opacity: .05;
+}
+
+.display {
+    position: absolute;
+}
+
+.visible {
+    z-index: -2;
+    opacity: .6;
+}
